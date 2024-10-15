@@ -1,2 +1,7 @@
 # libsegwayrmp_ros2
-libsegwayrmp ros2, the segway platform library modified to work with ros2
+libsegwayrmp ros2, the segway platform library modified to work with ros2 humble
+
+## Use this with ros2
+- run <code>export COLCON_WS=/path/to/your/colcon_ws/</code> from the ros2 workspace
+- clone using <code>git clone https://github.com/utexas-bwi/libsegwayrmp_ros2.git</code>
+- use the <code>segwayrmp</code> folder as a ros2 package
