@@ -63,7 +63,7 @@ add_library(libsegwayrmp SHARED ${LIBSEGWAYRMP_SRCS})
 target_include_directories(libsegwayrmp PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
-  ${COLCON_WS}/src/serial_for_ros2/serial/include  # Add the serial include directory
+  ${COLCON_WS}/serial/include  # Add the serial include directory
 )
 
 # Link the libraries to segwayrmp using keywords
