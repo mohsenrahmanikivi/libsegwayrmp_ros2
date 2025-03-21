@@ -21,10 +21,10 @@ endif()
 # Find Serial
 # ----->
 # Set serial include directory
-include_directories(${COLCON_WS}/serial/include)
+include_directories(${COLCON_WS}/src/serial_for_ros2/serial/include)
 
 # Find Serial Library (adjust the path to your actual library location)
-find_library(SERIAL_LIBRARY NAMES serial HINTS ${COLCON_WS}/serial/build)
+find_library(SERIAL_LIBRARY NAMES serial HINTS ${COLCON_WS}/src/serial_for_ros2/serial/build)
 
 if (NOT SERIAL_LIBRARY)
     message(FATAL_ERROR "Serial library not found!")
@@ -63,7 +63,7 @@ add_library(libsegwayrmp SHARED ${LIBSEGWAYRMP_SRCS})
 target_include_directories(libsegwayrmp PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
-  ${COLCON_WS}/serial/include  # Add the serial include directory
+  ${COLCON_WS}/src/serial_for_ros2/serial/include  # Add the serial include directory
 )
 
 # Link the libraries to segwayrmp using keywords
