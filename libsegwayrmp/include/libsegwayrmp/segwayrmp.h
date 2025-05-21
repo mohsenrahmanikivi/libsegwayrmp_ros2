@@ -368,7 +368,7 @@ public:
    */
   void
   configureUSBBySerial(std::string serial_number,
-                       int baudrate = 460800);
+                       int baudrate = 921600); // MOHSEN I changed it from m-460800 to 921600 as segway said in the doc to test
 
   /*!
    * Configures the FTD2XX usb interface, if the library is built with usb
